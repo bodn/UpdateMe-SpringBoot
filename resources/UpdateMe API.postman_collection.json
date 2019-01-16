@@ -1,0 +1,204 @@
+{
+	"info": {
+		"_postman_id": "23b49747-b48c-4c40-8f1e-cf020a6cd0e4",
+		"name": "UpdateMe API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "ping",
+			"item": [
+				{
+					"name": "ping",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{localhost}}/v1/ping",
+							"host": [
+								"{{localhost}}"
+							],
+							"path": [
+								"v1",
+								"ping"
+							]
+						},
+						"description": "test the spring application is running\n"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "RetrieveUsers",
+			"item": [
+				{
+					"name": "Retrieve All Users",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{localhost}}/v1/profiles/all",
+							"host": [
+								"{{localhost}}"
+							],
+							"path": [
+								"v1",
+								"profiles",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Retrieve User By ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{localhost}}/v1/profiles/1",
+							"host": [
+								"{{localhost}}"
+							],
+							"path": [
+								"v1",
+								"profiles",
+								"1"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Retrieve User By Invalid ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{localhost}}/v1/profiles/3",
+							"host": [
+								"{{localhost}}"
+							],
+							"path": [
+								"v1",
+								"profiles",
+								"3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "RetrievePosts",
+			"item": [
+				{
+					"name": "Retrieve Posts for User",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{localhost}}/v1/profile/1/posts",
+							"host": [
+								"{{localhost}}"
+							],
+							"path": [
+								"v1",
+								"profile",
+								"1",
+								"posts"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Retrieve Posts for User With Filter",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{localhost}}/v1/profile/1/posts/filter?twitch=false&youtube=true",
+							"host": [
+								"{{localhost}}"
+							],
+							"path": [
+								"v1",
+								"profile",
+								"1",
+								"posts",
+								"filter"
+							],
+							"query": [
+								{
+									"key": "twitch",
+									"value": "false"
+								},
+								{
+									"key": "youtube",
+									"value": "true"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Test",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{localhost}}/v1/test",
+					"host": [
+						"{{localhost}}"
+					],
+					"path": [
+						"v1",
+						"test"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
